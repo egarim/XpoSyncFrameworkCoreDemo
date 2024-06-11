@@ -13,7 +13,7 @@ namespace DemoApp.Maui
         public MainPage()
         {
             InitializeComponent();
-            this.ServerUrl.Text = "https://720c-89-117-53-109.ngrok-free.app";
+            this.ServerUrl.Text = "https://f1ba-89-117-53-109.ngrok-free.app";
         }
 
         private async void OnPush(object sender, EventArgs e)
