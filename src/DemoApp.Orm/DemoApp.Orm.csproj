@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Configurations>Debug;Release;DebugDemo</Configurations>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="BIT.Data.Sync" Version="2.0.0-beta" />
+		<PackageReference Include="DevExpress.Xpo" Version="$(XpoXafVersion)" />
+		<PackageReference Include="DevExpress.Persistent.Base" Version="$(XpoXafVersion)" />
+		<PackageReference Include="DevExpress.Persistent.BaseImpl.Xpo" Version="$(XpoXafVersion)" />
+	</ItemGroup>
+</Project>

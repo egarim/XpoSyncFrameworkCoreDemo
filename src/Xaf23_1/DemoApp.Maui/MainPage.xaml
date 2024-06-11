@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoApp.Maui.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label
+       Text="ServerUrl" />
+                <Editor x:Name="ServerUrl" ></Editor>
+                <Label
+             x:Name="ServerUrlLabel" />
+            <Button
+          x:Name="InitSyncFrameworkBtn"
+          Text="InitSyncFramework" 
+          Clicked="OnInitSyncFrameworkBtn"
+          HorizontalOptions="Fill" />       
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Button
+         x:Name="PullBtn"
+         Text="Pul" 
+         Clicked="OnPull"
+         HorizontalOptions="FillAndExpand" />
+                <Button
+         x:Name="PushBtn"
+         Text="Push" 
+         Clicked="OnPush"
+         HorizontalOptions="FillAndExpand" />
+                <Button
+x:Name="ComplexBtn"
+Text="Create complex transaction" 
+Clicked="OnComplexTransaction"
+HorizontalOptions="FillAndExpand" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
