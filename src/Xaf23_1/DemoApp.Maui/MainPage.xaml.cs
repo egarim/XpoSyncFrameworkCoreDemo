@@ -22,7 +22,7 @@ namespace DemoApp.Maui
             var Ds= unitOfWork.GetSyncDataStore();
             var Deltas=await Ds.DeltaStore.GetDeltasAsync("-1",default);
             var PushResponse= await unitOfWork.PushAsync();
-            
+            await DisplayAlert("Push", $"Success:{PushResponse.Success},{PushResponse.Message}", "OK");
         }
         private async void OnComplexTransaction(object sender, EventArgs e)
         {
@@ -39,27 +39,15 @@ namespace DemoApp.Maui
             {
                 Debug.WriteLine(customer.Name); 
             }
-
+            await DisplayAlert("Data created", "10 customers created", "OK");
         }
         private async void OnPull(object sender, EventArgs e)
         {
            var PullResponse= await MauiProgram.SyncFrameworkXpoDefault.CreateUnitOfWok().PullAsync();
-
-        
+          
+            await DisplayAlert("Pull", $"Success:{PullResponse.Success},{PullResponse.Message}", "OK");
         }
-        private async void Save(object sender, EventArgs e)
-        {
-            //var Context = await InitSyncFramework(this.ServerUrl.Text);
-            //Blog blog = new Blog
-            //{
-            //    Name = this.BlogName.Text,
-            //};
-            //Context.Add(blog);
-            //await Context.SaveChangesAsync();
-            //Items.Add(blog);
-            //this.BlogName.Text = "";
-
-        }
+   
 
         private async void OnInitSyncFrameworkBtn(object sender, EventArgs e)
         {
